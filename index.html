@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Utsho Courier | Your Trusted Delivery Partner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-50 font-sans">
+    <nav class="bg-white shadow-lg p-4 flex justify-between items-center px-10">
+      <h1 class="text-2xl font-bold text-blue-600">
+        Utsho <span class="text-orange-500">Courier</span>
+      </h1>
+      <ul class="flex space-x-6 font-medium">
+        <li><a href="#" class="hover:text-blue-600">Home</a></li>
+        <li><a href="#services" class="hover:text-blue-600">Services</a></li>
+        <li><a href="#track" class="hover:text-blue-600">Track Order</a></li>
+        <li>
+          <a
+            href="#"
+            class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+            >Login</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <header class="bg-blue-600 py-20 text-center text-white">
+      <h2 class="text-4xl font-extrabold mb-4">
+        দ্রুত এবং নিরাপদ ডেলিভারি এখন আপনার হাতের মুঠোয়
+      </h2>
+      <p class="mb-8 text-blue-100">
+        Utsho Courier - আমরা পৌঁছে দিই আস্থার সাথে।
+      </p>
+
+      <div
+        id="track"
+        class="bg-white p-6 rounded-xl shadow-2xl max-w-lg mx-auto text-gray-800"
+      >
+        <h3 class="text-lg font-bold mb-4">পার্সেল ট্র্যাক করুন</h3>
+        <div class="flex flex-col md:flex-row gap-2">
+          <input
+            type="text"
+            id="trackingID"
+            placeholder="ট্র্যাকিং আইডি দিন (যেমন: UC123)"
+            class="border p-3 flex-1 rounded-lg focus:outline-blue-500"
+          />
+          <button
+            onclick="trackParcel()"
+            class="bg-orange-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-orange-600 transition"
+          >
+            Search
+          </button>
+        </div>
+        <div id="statusResult" class="mt-4 p-3 hidden rounded-lg border"></div>
+      </div>
+    </header>
+
+    <section id="services" class="py-16 px-10">
+      <h2 class="text-3xl font-bold text-center mb-12">আমাদের সেবাসমূহ</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div
+          class="bg-white p-8 rounded-xl shadow hover:shadow-xl transition text-center"
+        >
+          <i class="fas fa-bolt text-4xl text-orange-500 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Express Delivery</h3>
+          <p class="text-gray-600">২৪ ঘণ্টার মধ্যে জরুরি পার্সেল ডেলিভারি।</p>
+        </div>
+        <div
+          class="bg-white p-8 rounded-xl shadow hover:shadow-xl transition text-center"
+        >
+          <i class="fas fa-box text-4xl text-blue-600 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">E-commerce Logistics</h3>
+          <p class="text-gray-600">
+            অনলাইন উদ্যোক্তাদের জন্য সেরা লজিস্টিক সাপোর্ট।
+          </p>
+        </div>
+        <div
+          class="bg-white p-8 rounded-xl shadow hover:shadow-xl transition text-center"
+        >
+          <i class="fas fa-truck-moving text-4xl text-green-500 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Standard Delivery</h3>
+          <p class="text-gray-600">সারাদেশে সাশ্রয়ী মূল্যে পণ্য ডেলিভারি।</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-10 text-center">
+      <p>&copy; 2026 Utsho Courier. All Rights Reserved.</p>
+      <p class="text-gray-400 text-sm mt-2">Developed by Tanzim Ahmed Utsho</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
