@@ -240,6 +240,7 @@
               আমাদের ক্যালকুলেটর ব্যবহার করুন।
             </p>
             <button
+              onclick="toggleModal('rateModal', true)"
               class="bg-white text-blue-600 px-8 py-3 rounded-xl font-bold hover:bg-orange-500 hover:text-white transition-all"
             >
               Check Rate Chart
@@ -294,6 +295,68 @@
       </div>
     </footer>
 
+    <!-- Rate Chart Modal -->
+    <div
+      id="rateModal"
+      class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+    >
+      <div
+        class="bg-white w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-300"
+      >
+        <div
+          class="bg-blue-600 p-6 text-white flex justify-between items-center"
+        >
+          <h3 class="text-xl font-bold">ডেলিভারি রেট চার্ট (২০২৬)</h3>
+          <button
+            onclick="toggleModal('rateModal', false)"
+            class="text-white hover:rotate-90 transition-transform"
+          >
+            <i class="fas fa-times text-2xl"></i>
+          </button>
+        </div>
+        <div class="p-6">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="border-b-2 border-gray-100">
+                  <th class="py-3 font-bold text-gray-700">এলাকা</th>
+                  <th class="py-3 font-bold text-gray-700">চার্জ (১ কেজি)</th>
+                  <th class="py-3 font-bold text-gray-700">
+                    অতিরিক্ত (প্রতি কেজি)
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="text-gray-600">
+                <tr class="border-b border-gray-50">
+                  <td class="py-4 font-medium">ঝিনাইদহ শহর</td>
+                  <td class="py-4">৬০ টাকা</td>
+                  <td class="py-4">১৫ টাকা</td>
+                </tr>
+                <tr class="border-b border-gray-50">
+                  <td class="py-4 font-medium">ঢাকা সিটি</td>
+                  <td class="py-4">৮০ টাকা</td>
+                  <td class="py-4">২০ টাকা</td>
+                </tr>
+                <tr class="border-b border-gray-50">
+                  <td class="py-4 font-medium">সারাদেশ</td>
+                  <td class="py-4">১৫০ টাকা</td>
+                  <td class="py-4">২৫ টাকা</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div
+            class="mt-6 bg-orange-50 p-4 rounded-xl border border-orange-100 text-sm text-orange-800 leading-relaxed"
+          >
+            <p>
+              <strong>নোট:</strong> ক্যাশ অন ডেলিভারি (COD) চার্জ ১% প্রযোজ্য।
+              বড় বা ভারী পার্সেলের ক্ষেত্রে চার্জ আলোচনা সাপেক্ষে নির্ধারিত হবে।
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script>
       function toggleDetails(btn) {
         const details = btn.previousElementSibling;
@@ -307,6 +370,17 @@
           details.classList.add("hidden");
           btn.innerHTML =
             'Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>';
+        }
+      }
+
+      function toggleModal(modalId, show) {
+        const modal = document.getElementById(modalId);
+        if (show) {
+          modal.classList.remove("hidden");
+          document.body.style.overflow = "hidden"; // স্ক্রলিং বন্ধ করার জন্য
+        } else {
+          modal.classList.add("hidden");
+          document.body.style.overflow = "auto";
         }
       }
     </script>
