@@ -5,307 +5,223 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login | Utsho Courier</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <style>
-      :root {
-        --navy: #071a3d;
-        --navy-soft: #102a5d;
-        --cyan: #75e6ff;
-        --sky: #3b82f6;
-        --amber: #ff9f43;
-        --mist: rgba(255, 255, 255, 0.1);
-      }
-
-      body {
-        font-family: "Manrope", sans-serif;
-        min-height: 100vh;
-        background:
-          radial-gradient(
-            circle at top left,
-            rgba(117, 230, 255, 0.22),
-            transparent 28%
-          ),
-          radial-gradient(
-            circle at 85% 12%,
-            rgba(59, 130, 246, 0.32),
-            transparent 24%
-          ),
-          radial-gradient(
-            circle at bottom right,
-            rgba(255, 159, 67, 0.16),
-            transparent 22%
-          ),
-          linear-gradient(135deg, #041127 0%, #0b1f46 48%, #102a5d 100%);
-      }
-
-      .premium-shell::before,
-      .premium-shell::after {
-        content: "";
-        position: absolute;
-        inset: auto;
-        border-radius: 999px;
-        filter: blur(18px);
-        opacity: 0.75;
-        z-index: 0;
-      }
-
-      .premium-shell::before {
-        width: 180px;
-        height: 180px;
-        top: -42px;
-        right: 8%;
-        background: rgba(117, 230, 255, 0.18);
-      }
-
-      .premium-shell::after {
-        width: 220px;
-        height: 220px;
-        left: -48px;
-        bottom: -56px;
-        background: rgba(255, 159, 67, 0.16);
-      }
-    </style>
   </head>
-  <body class="relative overflow-hidden text-white">
-    <div
-      class="premium-shell relative mx-auto flex min-h-screen max-w-7xl items-center px-4 py-8 sm:px-6 lg:px-8"
+  <body class="bg-slate-50 font-sans">
+    <!-- Navigation -->
+    <nav
+      class="bg-white shadow-md p-4 flex justify-between items-center px-6 md:px-20 sticky top-0 z-50"
     >
+      <h1 class="text-2xl font-bold text-blue-600">
+        Utsho <span class="text-orange-500">Courier</span>
+      </h1>
+      <ul class="hidden md:flex space-x-8 font-medium items-center">
+        <li>
+          <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+        </li>
+        <li>
+          <a href="services.html" class="hover:text-blue-600 transition"
+            >Services</a
+          >
+        </li>
+        <li>
+          <a href="tracking.html" class="hover:text-blue-600 transition"
+            >Track Order</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="bg-blue-600 text-white px-5 py-2 rounded-full shadow-md"
+            >Login</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-blue-600 py-20 text-center text-white">
+      <h2 class="text-4xl font-extrabold mb-4">স্বাগতম ফিরে আসার জন্য</h2>
+      <p class="text-blue-100 max-w-md mx-auto">
+        আপনার ড্যাশবোর্ড পরিচালনা করতে এবং পার্সেল ট্র্যাক করতে লগইন করুন।
+      </p>
+    </section>
+
+    <!-- Login Card -->
+    <main class="max-w-xl mx-auto px-6 -mt-16 mb-20">
       <div
-        class="relative z-10 grid w-full overflow-hidden rounded-[32px] border border-white/12 bg-white/6 shadow-[0_32px_80px_rgba(0,0,0,0.35)] backdrop-blur-2xl lg:grid-cols-[1.05fr_0.95fr]"
+        class="bg-white p-8 md:p-12 rounded-[32px] shadow-2xl border border-gray-100"
       >
-        <section
-          class="relative overflow-hidden border-b border-white/10 px-6 py-10 sm:px-10 lg:border-b-0 lg:border-r lg:px-12 lg:py-14"
-        >
+        <div class="text-center mb-10">
           <div
-            class="absolute inset-0 bg-gradient-to-br from-white/8 via-transparent to-transparent"
-          ></div>
-          <div class="relative">
-            <div class="mb-10 flex items-center justify-between">
-              <a
-                href="index.html"
-                class="text-2xl font-extrabold tracking-tight text-white"
-              >
-                Utsho <span class="text-[#ffb15f]">Courier</span>
-              </a>
-              <div
-                class="rounded-full border border-emerald-300/30 bg-emerald-400/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-emerald-200"
-              >
-                Secure Access
-              </div>
-            </div>
+            class="inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 py-2 text-xs font-bold uppercase tracking-widest text-blue-600 mb-4"
+          >
+            <i class="fas fa-lock"></i> Secure Login
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800">
+            অ্যাকাউন্টে সাইন ইন করুন
+          </h3>
+        </div>
 
-            <div class="max-w-xl">
-              <p
-                class="mb-4 text-sm font-semibold uppercase tracking-[0.38em] text-cyan-200/80"
-              >
-                Premium Logistics Dashboard
-              </p>
-              <h1
-                class="max-w-lg text-4xl font-extrabold leading-tight text-white sm:text-5xl"
-              >
-                Deliver faster
-              </h1>
-              <p
-                class="mt-5 max-w-xl text-base leading-7 text-slate-200/85 sm:text-lg"
-              >
-                অর্ডার পরিচালনা করতে, পার্সেলের সরাসরি প্রবাহ ট্র্যাক করতে এবং
-                প্রেরণ থেকে শুরু করে আপনার দোরগোড়ায় পৌঁছানো পর্যন্ত প্রতিটি
-                ডেলিভারি অভিজ্ঞতা মসৃণ রাখতে সাইন ইন করুন।
-              </p>
-            </div>
-
-            <div
-              class="mt-10 rounded-[28px] border border-white/10 bg-slate-950/20 p-6 sm:p-7"
+        <form id="loginForm" class="space-y-6">
+          <div>
+            <label class="mb-2 block text-sm font-bold text-gray-700"
+              >Email Address</label
             >
-              <div class="flex items-start gap-4">
-                <div
-                  class="flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-300/12 text-cyan-200"
-                >
-                  <i class="fas fa-route text-lg"></i>
-                </div>
-                <div class="max-w-lg">
-                  <p
-                    class="text-sm font-semibold uppercase tracking-[0.28em] text-cyan-200/80"
-                  >
-                    বিশ্বস্ত logistics support
-                  </p>
-                  <p
-                    class="mt-3 text-sm leading-7 text-slate-200/80 sm:text-base"
-                  >
-                    পার্সেল ট্র্যাক করা, মার্চেন্ট কার্যকলাপ পরিচালনা করা এবং
-                    সহজে সাপোর্ট প্রদানের জন্য একটি সুসংহত প্ল্যাটফর্ম।
-                  </p>
-                </div>
-              </div>
-              <div
-                class="mt-6 grid gap-3 text-sm text-slate-100 sm:grid-cols-3"
+            <div class="relative">
+              <span
+                class="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-400"
               >
-                <div
-                  class="rounded-2xl border border-white/10 bg-white/6 px-4 py-3"
-                >
-                  Instant parcel lookup
-                </div>
-                <div
-                  class="rounded-2xl border border-white/10 bg-white/6 px-4 py-3"
-                >
-                  Role-based access
-                </div>
-                <div
-                  class="rounded-2xl border border-white/10 bg-white/6 px-4 py-3"
-                >
-                  24/7 support team
-                </div>
-              </div>
+                <i class="fas fa-envelope"></i>
+              </span>
+              <input
+                type="email"
+                id="email"
+                required
+                placeholder="example@mail.com"
+                class="w-full rounded-2xl border border-gray-200 bg-gray-50 py-4 pl-12 pr-4 text-gray-800 focus:border-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-500/10 transition-all"
+              />
             </div>
           </div>
-        </section>
 
-        <section class="px-6 py-10 sm:px-10 lg:px-12 lg:py-14">
-          <div class="mx-auto max-w-md">
-            <div class="mb-8">
-              <div
-                class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/8 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-slate-200"
+          <div>
+            <div class="mb-2 flex items-center justify-between">
+              <label class="block text-sm font-bold text-gray-700"
+                >Password</label
               >
-                <span class="h-2 w-2 rounded-full bg-emerald-300"></span>
-                Member Login
-              </div>
-              <h2
-                class="mt-5 text-3xl font-extrabold text-white sm:text-[2.1rem]"
-              >
-                Welcome back
-              </h2>
-              <p class="mt-3 text-sm leading-7 text-slate-300">
-                Use your email and password to continue to the courier
-                workspace.
-              </p>
-            </div>
-
-            <form id="loginForm" class="space-y-5">
-              <div>
-                <label class="mb-2 block text-sm font-medium text-slate-100"
-                  >Email Address</label
-                >
-                <div class="relative">
-                  <span
-                    class="absolute inset-y-0 left-0 flex items-center pl-4 text-slate-400"
-                  >
-                    <i class="fas fa-envelope"></i>
-                  </span>
-                  <input
-                    type="email"
-                    id="email"
-                    required
-                    placeholder="example@mail.com"
-                    class="w-full rounded-2xl border border-white/10 bg-slate-950/35 py-3.5 pl-12 pr-4 text-white placeholder:text-slate-500 focus:border-cyan-300/70 focus:outline-none focus:ring-4 focus:ring-cyan-300/10"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <div class="mb-2 flex items-center justify-between">
-                  <label class="block text-sm font-medium text-slate-100"
-                    >Password</label
-                  >
-                  <a
-                    href="#"
-                    class="text-xs font-semibold text-cyan-200 transition hover:text-white"
-                    >Forgot password?</a
-                  >
-                </div>
-                <div class="relative">
-                  <span
-                    class="absolute inset-y-0 left-0 flex items-center pl-4 text-slate-400"
-                  >
-                    <i class="fas fa-lock"></i>
-                  </span>
-                  <input
-                    type="password"
-                    id="password"
-                    required
-                    placeholder="Enter your password"
-                    class="w-full rounded-2xl border border-white/10 bg-slate-950/35 py-3.5 pl-12 pr-12 text-white placeholder:text-slate-500 focus:border-cyan-300/70 focus:outline-none focus:ring-4 focus:ring-cyan-300/10"
-                  />
-                  <span
-                    class="absolute inset-y-0 right-0 flex cursor-pointer items-center pr-4 text-slate-400 transition hover:text-white"
-                    onclick="togglePassword()"
-                  >
-                    <i id="eyeIcon" class="fas fa-eye"></i>
-                  </span>
-                </div>
-              </div>
-
-              <div
-                class="flex items-center justify-between gap-4 text-sm text-slate-300"
-              >
-                <label class="flex items-center gap-2">
-                  <input
-                    type="checkbox"
-                    class="h-4 w-4 rounded border-white/20 bg-white/10 accent-[#ff9f43]"
-                  />
-                  Keep me signed in
-                </label>
-                <span
-                  class="rounded-full border border-white/10 bg-white/6 px-3 py-1 text-xs text-slate-200"
-                >
-                  Encrypted session
-                </span>
-              </div>
-
-              <button
-                type="submit"
-                class="w-full rounded-2xl bg-gradient-to-r from-[#ff9f43] via-[#ff8a3d] to-[#ff7635] px-6 py-3.5 text-base font-bold text-white shadow-[0_18px_34px_rgba(255,138,61,0.35)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_24px_40px_rgba(255,138,61,0.45)] active:translate-y-0"
-              >
-                Login <i class="fas fa-arrow-right ml-2"></i>
-              </button>
-            </form>
-
-            <div class="mt-8">
-              <div class="relative flex items-center justify-center">
-                <div class="w-full border-t border-white/10"></div>
-                <span
-                  class="absolute bg-transparent px-4 text-xs font-semibold uppercase tracking-[0.3em] text-slate-400"
-                >
-                  Or continue with
-                </span>
-              </div>
-
-              <div class="mt-6 grid grid-cols-2 gap-4">
-                <button
-                  class="flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-                >
-                  <i class="fab fa-google text-red-400"></i>
-                  Google
-                </button>
-                <button
-                  class="flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-                >
-                  <i class="fab fa-facebook-f text-sky-400"></i>
-                  Facebook
-                </button>
-              </div>
-            </div>
-
-            <p class="mt-8 text-center text-sm text-slate-300">
-              New to Utsho Courier?
               <a
                 href="#"
-                class="font-bold text-[#ffb15f] transition hover:text-white"
-                >Create an account</a
+                class="text-xs font-bold text-blue-600 hover:text-orange-500 transition"
+                >Forgot password?</a
               >
-            </p>
+            </div>
+            <div class="relative">
+              <span
+                class="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-400"
+              >
+                <i class="fas fa-lock"></i>
+              </span>
+              <input
+                type="password"
+                id="password"
+                required
+                placeholder="Enter your password"
+                class="w-full rounded-2xl border border-gray-200 bg-gray-50 py-4 pl-12 pr-12 text-gray-800 focus:border-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-500/10 transition-all"
+              />
+              <span
+                class="absolute inset-y-0 right-0 flex cursor-pointer items-center pr-4 text-gray-400 hover:text-blue-600 transition"
+                onclick="togglePassword()"
+              >
+                <i id="eyeIcon" class="fas fa-eye"></i>
+              </span>
+            </div>
           </div>
-        </section>
+
+          <div
+            class="flex items-center justify-between gap-4 text-sm text-gray-600"
+          >
+            <label class="flex items-center gap-2">
+              <input
+                type="checkbox"
+                class="h-4 w-4 rounded border-gray-300 accent-blue-600"
+              />
+              Keep me signed in
+            </label>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full rounded-2xl bg-blue-600 px-6 py-4 text-base font-bold text-white shadow-lg shadow-blue-200 transition duration-300 hover:bg-orange-500 hover:-translate-y-1"
+          >
+            Login <i class="fas fa-arrow-right ml-2"></i>
+          </button>
+        </form>
+
+        <div class="mt-8">
+          <div class="relative flex items-center justify-center">
+            <div class="w-full border-t border-gray-100"></div>
+            <span
+              class="absolute bg-white px-4 text-xs font-bold uppercase tracking-widest text-gray-400"
+            >
+              Or continue with
+            </span>
+          </div>
+
+          <div class="mt-6 grid grid-cols-2 gap-4">
+            <button
+              class="flex items-center justify-center gap-2 rounded-2xl border border-gray-200 bg-white py-3 text-sm font-bold text-gray-700 transition hover:bg-gray-50"
+            >
+              <i class="fab fa-google text-red-400"></i>
+              Google
+            </button>
+            <button
+              class="flex items-center justify-center gap-2 rounded-2xl border border-gray-200 bg-white py-3 text-sm font-bold text-gray-700 transition hover:bg-gray-50"
+            >
+              <i class="fab fa-facebook-f text-sky-400"></i>
+              Facebook
+            </button>
+          </div>
+        </div>
+
+        <p class="mt-10 text-center text-sm text-gray-600">
+          New to Utsho Courier?
+          <a
+            href="#"
+            class="font-bold text-blue-600 hover:text-orange-500 transition"
+            >Create an account</a
+          >
+        </p>
       </div>
-    </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12 px-6">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Utsho Courier</h2>
+          <p class="text-slate-400">
+            আপনার প্রতিটি পার্সেল আমাদের কাছে একটি আমানত।
+          </p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-slate-400">
+            <li>
+              <a href="privacy.html" class="hover:text-white">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="terms.html" class="hover:text-white">Terms of Service</a>
+            </li>
+            <li>
+              <a href="contact.html" class="hover:text-white">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Follow Us</h4>
+          <div class="flex space-x-4 text-2xl">
+            <a href="#" class="hover:text-blue-500"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" class="hover:text-pink-500"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="hover:text-blue-400"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="border-t border-slate-800 mt-10 pt-6 text-center text-slate-500 text-sm"
+      >
+        &copy; 2026 Utsho Courier | Developed by
+        <span class="text-white">Tanzim Ahmed Utsho</span>
+      </div>
+    </footer>
 
     <script src="logIn.js"></script>
   </body>
