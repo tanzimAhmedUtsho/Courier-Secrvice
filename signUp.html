@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login | Utsho Courier</title>
+    <title>Sign Up | Utsho Courier</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
@@ -34,8 +34,8 @@
         </li>
         <li>
           <a
-            href="#"
-            class="bg-blue-600 text-white px-5 py-2 rounded-full shadow-md"
+            href="logIn.html"
+            class="bg-blue-600 text-white px-5 py-2 rounded-full shadow-md hover:bg-blue-700 transition"
             >Login</a
           >
         </li>
@@ -43,30 +43,51 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-blue-600 py-20 text-center text-white">
-      <h2 class="text-4xl font-extrabold mb-4">স্বাগতম ফিরে আসার জন্য</h2>
-      <p class="text-blue-100 max-w-md mx-auto">
-        আপনার ড্যাশবোর্ড পরিচালনা করতে এবং পার্সেল ট্র্যাক করতে লগইন করুন।
+    <section class="bg-blue-600 py-16 text-center text-white">
+      <h2 class="text-4xl font-extrabold mb-4">আমাদের পরিবারের অংশ হোন</h2>
+      <p class="text-blue-100 max-w-md mx-auto px-4">
+        সহজ রেজিস্ট্রেশন প্রক্রিয়ার মাধ্যমে আপনার পার্সেল ডেলিভারি আরও দ্রুত
+        এবং নিরাপদ করুন।
       </p>
     </section>
 
-    <!-- Login Card -->
-    <main class="max-w-xl mx-auto px-6 -mt-16 mb-20">
+    <!-- Sign Up Card -->
+    <main class="max-w-xl mx-auto px-6 -mt-12 mb-20">
       <div
         class="bg-white p-8 md:p-12 rounded-[32px] shadow-2xl border border-gray-100"
       >
         <div class="text-center mb-10">
           <div
-            class="inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 py-2 text-xs font-bold uppercase tracking-widest text-blue-600 mb-4"
+            class="inline-flex items-center gap-2 rounded-full bg-orange-50 px-4 py-2 text-xs font-bold uppercase tracking-widest text-orange-600 mb-4"
           >
-            <i class="fas fa-lock"></i> Secure Login
+            <i class="fas fa-user-plus"></i> Join Us
           </div>
           <h3 class="text-2xl font-bold text-gray-800">
-            অ্যাকাউন্টে সাইন ইন করুন
+            নতুন অ্যাকাউন্ট তৈরি করুন
           </h3>
         </div>
 
-        <form id="loginForm" class="space-y-6">
+        <form id="signUpForm" class="space-y-5">
+          <div>
+            <label class="mb-2 block text-sm font-bold text-gray-700"
+              >Full Name</label
+            >
+            <div class="relative">
+              <span
+                class="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-400"
+              >
+                <i class="fas fa-user"></i>
+              </span>
+              <input
+                type="text"
+                id="fullName"
+                required
+                placeholder="Tanzim Ahmed"
+                class="w-full rounded-2xl border border-gray-200 bg-gray-50 py-4 pl-12 pr-4 text-gray-800 focus:border-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-500/10 transition-all"
+              />
+            </div>
+          </div>
+
           <div>
             <label class="mb-2 block text-sm font-bold text-gray-700"
               >Email Address</label
@@ -88,16 +109,29 @@
           </div>
 
           <div>
-            <div class="mb-2 flex items-center justify-between">
-              <label class="block text-sm font-bold text-gray-700"
-                >Password</label
+            <label class="mb-2 block text-sm font-bold text-gray-700"
+              >Phone Number</label
+            >
+            <div class="relative">
+              <span
+                class="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-400"
               >
-              <a
-                href="#"
-                class="text-xs font-bold text-blue-600 hover:text-orange-500 transition"
-                >Forgot password?</a
-              >
+                <i class="fas fa-phone"></i>
+              </span>
+              <input
+                type="tel"
+                id="phone"
+                required
+                placeholder="017XX XXXXXX"
+                class="w-full rounded-2xl border border-gray-200 bg-gray-50 py-4 pl-12 pr-4 text-gray-800 focus:border-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-500/10 transition-all"
+              />
             </div>
+          </div>
+
+          <div>
+            <label class="mb-2 block text-sm font-bold text-gray-700"
+              >Password</label
+            >
             <div class="relative">
               <span
                 class="absolute inset-y-0 left-0 flex items-center pl-4 text-gray-400"
@@ -108,7 +142,7 @@
                 type="password"
                 id="password"
                 required
-                placeholder="Enter your password"
+                placeholder="Create a password"
                 class="w-full rounded-2xl border border-gray-200 bg-gray-50 py-4 pl-12 pr-12 text-gray-800 focus:border-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-500/10 transition-all"
               />
               <span
@@ -120,23 +154,36 @@
             </div>
           </div>
 
-          <div
-            class="flex items-center justify-between gap-4 text-sm text-gray-600"
-          >
-            <label class="flex items-center gap-2">
+          <div class="text-sm text-gray-600 py-2">
+            <label class="flex items-start gap-2 cursor-pointer">
               <input
                 type="checkbox"
-                class="h-4 w-4 rounded border-gray-300 accent-blue-600"
+                required
+                class="mt-1 h-4 w-4 rounded border-gray-300 accent-blue-600"
               />
-              Keep me signed in
+              <span
+                >আমি
+                <a
+                  href="terms.html"
+                  class="text-blue-600 font-bold hover:underline"
+                  >শর্তাবলী</a
+                >
+                এবং
+                <a
+                  href="privacy.html"
+                  class="text-blue-600 font-bold hover:underline"
+                  >গোপনীয়তা নীতি</a
+                >
+                মেনে নিচ্ছি।</span
+              >
             </label>
           </div>
 
           <button
             type="submit"
-            class="w-full rounded-2xl bg-blue-600 px-6 py-4 text-base font-bold text-white shadow-lg shadow-blue-200 transition duration-300 hover:bg-orange-500 hover:-translate-y-1"
+            class="w-full rounded-2xl bg-orange-500 px-6 py-4 text-base font-bold text-white shadow-lg shadow-orange-100 transition duration-300 hover:bg-blue-600 hover:-translate-y-1"
           >
-            Login <i class="fas fa-arrow-right ml-2"></i>
+            Create Account <i class="fas fa-arrow-right ml-2"></i>
           </button>
         </form>
 
@@ -145,39 +192,34 @@
             <div class="w-full border-t border-gray-100"></div>
             <span
               class="absolute bg-white px-4 text-xs font-bold uppercase tracking-widest text-gray-400"
+              >Or sign up with</span
             >
-              Or continue with
-            </span>
           </div>
-
           <div class="mt-6 grid grid-cols-2 gap-4">
             <button
               class="flex items-center justify-center gap-2 rounded-2xl border border-gray-200 bg-white py-3 text-sm font-bold text-gray-700 transition hover:bg-gray-50"
             >
-              <i class="fab fa-google text-red-400"></i>
-              Google
+              <i class="fab fa-google text-red-400"></i> Google
             </button>
             <button
               class="flex items-center justify-center gap-2 rounded-2xl border border-gray-200 bg-white py-3 text-sm font-bold text-gray-700 transition hover:bg-gray-50"
             >
-              <i class="fab fa-facebook-f text-sky-400"></i>
-              Facebook
+              <i class="fab fa-facebook-f text-sky-400"></i> Facebook
             </button>
           </div>
         </div>
 
         <p class="mt-10 text-center text-sm text-gray-600">
-          New to Utsho Courier?
+          Already have an account?
           <a
-            href="signUp.html"
+            href="logIn.html"
             class="font-bold text-blue-600 hover:text-orange-500 transition"
-            >Create an account</a
+            >Sign in instead</a
           >
         </p>
       </div>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-slate-900 text-white py-12 px-6">
       <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
@@ -223,6 +265,6 @@
       </div>
     </footer>
 
-    <script src="logIn.js"></script>
+    <script src="signUp.js"></script>
   </body>
 </html>
