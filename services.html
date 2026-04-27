@@ -66,7 +66,14 @@
             শহরের ভেতরে মাত্র ৬-১২ ঘণ্টার মধ্যে সুপার ফাস্ট ডেলিভারি নিশ্চিত করি
             আমরা।
           </p>
-          <span class="text-blue-600 font-semibold cursor-pointer"
+          <div class="hidden text-gray-500 text-sm mb-4 italic">
+            আমাদের কাছে এক্সপ্রেস ডেলিভারি মানেই সময়মতো গন্তব্যে পৌঁছানো। আমরা
+            অত্যাধুনিক ট্র্যাকিং এবং ডেডিকেটেড রাইডারদের মাধ্যমে এই সেবা নিশ্চিত
+            করি।
+          </div>
+          <span
+            onclick="toggleDetails(this)"
+            class="text-blue-600 font-semibold cursor-pointer"
             >Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i
           ></span>
         </div>
@@ -86,7 +93,13 @@
             অনলাইন উদ্যোক্তাদের জন্য বিশেষ ক্যাশ-অন-ডেলিভারি এবং রিটার্ন
             ম্যানেজমেন্ট সুবিধা।
           </p>
-          <span class="text-blue-600 font-semibold cursor-pointer"
+          <div class="hidden text-gray-500 text-sm mb-4 italic">
+            আপনার ব্যবসার বিকাশে আমরা ক্যাশ অন ডেলিভারি (COD) পেমেন্ট খুব দ্রুত
+            সেটেল করি, যা উদ্যোক্তাদের নগদ প্রবাহে সাহায্য করে।
+          </div>
+          <span
+            onclick="toggleDetails(this)"
+            class="text-blue-600 font-semibold cursor-pointer"
             >Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i
           ></span>
         </div>
@@ -106,7 +119,13 @@
             ৬৪ জেলায় আমাদের নিজস্ব নেটওয়ার্কের মাধ্যমে পৌঁছে দিচ্ছি আপনার
             প্রয়োজনীয় পণ্য।
           </p>
-          <span class="text-blue-600 font-semibold cursor-pointer"
+          <div class="hidden text-gray-500 text-sm mb-4 italic">
+            থানা পর্যায়েও আমাদের ডেলিভারি নেটওয়ার্ক বিস্তৃত। আপনি যেখানেই থাকুন
+            না কেন, আপনার পার্সেল পৌঁছাবে নিরাপদে।
+          </div>
+          <span
+            onclick="toggleDetails(this)"
+            class="text-blue-600 font-semibold cursor-pointer"
             >Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i
           ></span>
         </div>
@@ -124,7 +143,13 @@
             কাঁচের বা ভঙ্গুর পণ্যগুলোর জন্য আমাদের রয়েছে বিশেষ প্যাকিং এবং
             হ্যান্ডলিং ব্যবস্থা।
           </p>
-          <span class="text-blue-600 font-semibold cursor-pointer"
+          <div class="hidden text-gray-500 text-sm mb-4 italic">
+            পার্সেলগুলো বাবল র‍্যাপ এবং শক্ত কার্টন ব্যবহার করে প্যাকিং করা হয়
+            যাতে পথে কোনো ক্ষতি না হয়।
+          </div>
+          <span
+            onclick="toggleDetails(this)"
+            class="text-blue-600 font-semibold cursor-pointer"
             >Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i
           ></span>
         </div>
@@ -142,7 +167,13 @@
             আপনার স্টক ম্যানেজ করার জন্য আমাদের রয়েছে নিরাপদ এবং বড় স্টোরেজ
             সুবিধা।
           </p>
-          <span class="text-blue-600 font-semibold cursor-pointer"
+          <div class="hidden text-gray-500 text-sm mb-4 italic">
+            আমরা ইনভেন্টরি ম্যানেজমেন্ট থেকে শুরু করে অর্ডার ফুলফিলমেন্ট পর্যন্ত
+            সব দায়িত্ব পালন করি।
+          </div>
+          <span
+            onclick="toggleDetails(this)"
+            class="text-blue-600 font-semibold cursor-pointer"
             >Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i
           ></span>
         </div>
@@ -161,7 +192,13 @@
           <p class="text-gray-600 leading-relaxed mb-4">
             অফিসিয়াল ডকুমেন্ট এবং বড় কনসাইনমেন্টের জন্য ডেডিকেটেড সাপোর্ট।
           </p>
-          <span class="text-blue-600 font-semibold cursor-pointer"
+          <div class="hidden text-gray-500 text-sm mb-4 italic">
+            বড় কোম্পানির জন্য আমরা বিশেষ চুক্তিভিত্তিক হার এবং মাসিক রিপোর্টিং
+            সুবিধা প্রদান করি।
+          </div>
+          <span
+            onclick="toggleDetails(this)"
+            class="text-blue-600 font-semibold cursor-pointer"
             >Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i
           ></span>
         </div>
@@ -256,5 +293,22 @@
         <span class="text-white">Tanzim Ahmed Utsho</span>
       </div>
     </footer>
+
+    <script>
+      function toggleDetails(btn) {
+        const details = btn.previousElementSibling;
+        const isHidden = details.classList.contains("hidden");
+
+        if (isHidden) {
+          details.classList.remove("hidden");
+          btn.innerHTML =
+            'Show Less <i class="fas fa-arrow-up ml-2 text-sm"></i>';
+        } else {
+          details.classList.add("hidden");
+          btn.innerHTML =
+            'Learn More <i class="fas fa-arrow-right ml-2 text-sm"></i>';
+        }
+      }
+    </script>
   </body>
 </html>
